@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treasure Maze Escape</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="hero">
+      <h1>Treasure Maze Escape</h1>
+      <p>Escape the cursed ancient maze, gather the route, unlock the gates, and claim the lost treasure.</p>
+    </header>
+
+    <section class="status-panel" aria-label="Player status">
+      <div>Health: <span id="health">5</span></div>
+      <div>Map Pieces: <span id="mapPieces">0/3</span></div>
+      <div>Silver Key: <span id="silverKey">No</span></div>
+      <div>Golden Key: <span id="goldenKey">No</span></div>
+      <div>Switches: <span id="switches">0/2</span></div>
+      <div>Compass Energy: <span id="compassEnergy">3/3</span></div>
+      <div>Maze Shift: <span id="shiftTimer">30s</span></div>
+    </section>
+
+    <section id="messagePanel" class="message-panel" aria-live="polite">
+      Collect 3 map pieces, find both keys, and reach the treasure.
+    </section>
+
+    <section id="gameBoard" class="game-board" aria-label="Treasure maze game board"></section>
+
+    <section class="controls">
+      <p><strong>Move:</strong> Arrow keys or WASD | <strong>Use Compass:</strong> C</p>
+      <p><strong>Goal:</strong> Collect map pieces, keys, activate switches, open gates, and solve the treasure puzzle.</p>
+      <button id="restartButton" type="button">Restart Adventure</button>
+    </section>
+
+    <section id="puzzleModal" class="puzzle-modal hidden" aria-label="Treasure puzzle">
+      <div class="puzzle-card">
+        <h2>Ancient Treasure Code</h2>
+        <p>Select the 3 symbols revealed by your map pieces.</p>
+        <div class="puzzle-selects">
+          <select id="puzzleSymbolOne"></select>
+          <select id="puzzleSymbolTwo"></select>
+          <select id="puzzleSymbolThree"></select>
+        </div>
+        <div class="puzzle-actions">
+          <button id="submitPuzzleButton" type="button">Unlock Treasure</button>
+          <button id="closePuzzleButton" type="button">Back Away</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="overlay" class="overlay hidden">
+      <div class="overlay-card">
+        <h2 id="overlayTitle">Adventure Complete</h2>
+        <p id="overlayMessage">You found the lost treasure!</p>
+        <button id="overlayRestartButton" type="button">Restart Adventure</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
