@@ -4,6 +4,12 @@ Treasure Maze Escape is a browser-based pirate maze adventure built with Node.js
 
 Explore a cursed ancient maze, collect map pieces, unlock gates, avoid monsters and traps, solve the treasure code, and escape with the lost treasure.
 
+## Play Online
+
+```text
+https://sherryonline.github.io/treasure-maze-escape/
+```
+
 ## Run Locally
 
 Install dependencies:
